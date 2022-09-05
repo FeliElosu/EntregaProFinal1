@@ -1,0 +1,77 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+        <div class="text-center">
+            <img height="40px" src="{{url}}" >
+            <h3>Que bueno verte {{user.username}}</h3>
+        </div> -->
+
+    <!-- Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>{{mensaje}}</h1>
+  
+
+    <h3>Podes buscar cualquier articulo:</h3>
+
+    <form action="/AppCoder/buscar/" method="GET">
+
+        <input type="text" name="nombre" id="nombre">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    
+    {% if tees %}
+
+    <p><h3>Tees</h3></p>
+
+    <ul>
+	{% for t in tees %}
+    <h3>{{t.nombre}} </h3>
+	<h5> $USD{{t.precio}} </h5>
+    <img src= {{t.imagen}} alt="HTML5 Icon" style="width:333px;height:333px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+
+    {% if bottoms %}
+
+    <p><h3>Bottoms</h3></p>
+
+    <ul>
+	{% for t in bottoms %}
+    <h3>{{t.nombre}} </h3>
+	<h5> $USD{{t.precio}} </h5>
+    <img src= {{t.imagen}} alt="HTML5 Icon" style="width:333px;height:333px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+
+    {% if outwear %}
+
+    <p><h3>Outwear</h3></p>
+
+    <ul>
+	{% for t in outwear %}
+    <h3>{{t.nombre}} </h3>
+	<h5> $USD{{t.precio}} </h5>
+    <img src= {{t.imagen}} alt="HTML5 Icon" style="width:333px;height:333px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+    <p style="color: red;">{{respuesta}}</p>
+
+
+    {% endblock %}

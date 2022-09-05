@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Profesores</h1>
+    {% for p in profesores %}
+    Nombre: {{p.nombre}} <br>
+    Apellido: {{p.apellido}} <br>
+    Email: {{p.email}} <br>
+    Profesion: {{p.profesion}} <br>
+    {% endfor %}
+
+    <br>
+    <a href="agregarProfesores">Agregar otro Profesor</a>
+
+</body>
+</html>
+
+{% endblock %}

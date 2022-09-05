@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<center>
+    {% for p in tees%}
+    
+    <h3>{{p.nombre}}</h3>
+    <h5> $USD{{p.precio}} </h5>
+    <img src= {{p.imagen}} alt="HTML5 Icon" style="width:333px;height:333px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>
+
+    {% endfor %}
+
+    <br>
+    <a href="leerTees">Agregar otro Tee</a>
+</center>
+</body>
+</html>
+
+{% endblock %}

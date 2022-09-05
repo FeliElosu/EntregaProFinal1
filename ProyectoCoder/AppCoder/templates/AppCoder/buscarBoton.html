@@ -1,0 +1,17 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3>Podes buscar cualquier articulo:</h3>
+
+<form action="/AppCoder/buscar/" method="GET">
+
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock %}
