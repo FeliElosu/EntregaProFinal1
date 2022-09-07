@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Inicio</title>
+        <title>TopClothes</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{%static 'AppCoder/assets/favicon.ico' %}" />
         <!-- Bootstrap icons-->
@@ -30,9 +30,9 @@
                 <a class="navbar-brand" href="{% url 'leerTees' %}">Tees</a>
                 <a class="navbar-brand" href="{% url 'leerBottoms' %}">Bottoms</a>
                 <a class="navbar-brand" href="{% url 'leerOutwears' %}">Outwear</a>
-                <a class="navbar-brand" href="{% url 'buscarBoton' %}">Buscar</a>
+                <a class="navbar-brand" href="{% url 'buscarBoton' %}">Search</a>
                 {% if not request.user.is_authenticated %}
-                <a class="btn btn-primary" href="{% url 'Login' %}">INICIAR</a>
+                <a class="btn btn-primary" href="{% url 'Login' %}">Login</a>
                 {% endif %}
 
                 {% if request.user.is_authenticated %}
@@ -46,14 +46,14 @@
 
         
     <!-- Masthead
-            <header class="masthead">
+             <header class="masthead">
                 <div class="container position-relative">
                     <div class="row justify-content-center">
                         <div class="col-xl-6">
-                            <div class="text-center text-white"-->
-                                <!-- Page heading-->
-                                <!--<h1 class="mb-5">Nuestra web Intermedia de Django - CoderHouse</h1-->
-                                <!-- Signup form-->
+                            <<div class="text-center text-white"-->
+                                <!-- Page heading
+                                 <h1 class="mb-5"></h1>
+                                 Signup form -->
                                 <!-- * * * * * * * * * * * * * * *-->
                                 <!-- * * SB Forms Contact Form * *-->
                                 <!-- * * * * * * * * * * * * * * *-->
@@ -82,7 +82,9 @@
      
         <!-- Footer-->
         <footer class="footer bg-light">
+            
             <div class="container">
+                <div id="footer"></div>
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <ul class="list-inline mb-2">
